@@ -2,6 +2,7 @@ package io.dheerajd;
 
 public class MathUtils {
 	public double computeCircleArea(int radius) {
-		return 0;
+		final double PI = 3.14;
+		return (PI*radius*radius);
 	}
 }
