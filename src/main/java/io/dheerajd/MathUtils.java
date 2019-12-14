@@ -1,7 +1,7 @@
 package io.dheerajd;
 
 public class MathUtils {
-	public int add(int a, int b) {
-		return a+b;
+	public double computeCircleArea(int radius) {
+		return 0;
 	}
 }
