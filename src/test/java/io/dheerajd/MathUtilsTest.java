@@ -2,12 +2,17 @@ package io.dheerajd;
 
 
 import org.junit.jupiter.api.Assertions;
-
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class MathUtilsTest {
 	
-	MathUtils mathUtils = new MathUtils();
+	MathUtils mathUtils;
+	
+	@BeforeEach
+	void init() {
+		mathUtils = new MathUtils();
+	}
 
 	@Test
 	void testAdd() {
@@ -17,8 +22,18 @@ class MathUtilsTest {
 	}
 	
 	@Test
+	void testSubtract() {
+		Assertions.assertEquals(0, mathUtils.subtract(1,1));
+	}
+	
+	@Test
 	void testDivide() {
 		Assertions.assertThrows(ArithmeticException.class, () -> mathUtils.divide(10, 0));
 	}
 
+	@Test
+	void testMultiply() {
+		Assertions.assertEquals(10, mathUtils.multiply(5, 2));
+	}
+	
 }
